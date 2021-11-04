@@ -17,6 +17,9 @@ namespace Umfrage_Auswetung
       private Dictionary<int,Dictionary<string,string>> Custumers = new Dictionary<int,Dictionary<string,string>>();
       private List<int> PreSortedList = new List<int>();
 
+      private Dictionary<int, Dictionary<string, string>>.KeyCollection PersonNumber;
+
+
       public void LoadData()
       {
          Dictionary<string,string> PersonData = new Dictionary<string,string>();
@@ -31,6 +34,7 @@ namespace Umfrage_Auswetung
             PersonData = m_DataOperation.DeconvertDataFromJSON(m_DataOperation.ReadFromFile(newPath));
             Custumers.Add(i, PersonData);
          }
+         PersonNumber = Custumers.Keys;
       }
 
       public void AddDataSeries(System.Windows.Forms.DataVisualization.Charting.Chart ChartName, string preSortItem, string mainSortItem, string xAxisItem)
@@ -42,6 +46,7 @@ namespace Umfrage_Auswetung
 
       private void SplitforxAxis(string xAxisItem)
       {
+
          return;
       }
 
@@ -51,17 +56,21 @@ namespace Umfrage_Auswetung
          return 0;
       }
 
-      private void StartAnalyse(string preSortItem, string mainSortItem)
+      public void StartAnalyse(string preSortItem, string mainSortItem)
       {
-         buildSortedList(preSortItem);
-         buildSortedList(mainSortItem);
+         if(mainSortItem == "")
+            foreach(int person in PersonNumber)
+              PreSortedList.Add(person);
+
+         buildSortedList(translateItem(preSortItem),translateItem(mainSortItem));
          return;
       }
 
-      private void buildSortedList(string SelectingItem)
+      private void buildSortedList(string presort, string mainsort)
       {
-
-
+         foreach(int person in PersonNumber)
+            if(Custumers[person][presort] == mainsort)
+               PreSortedList.Add(person);
          return;
       }
 

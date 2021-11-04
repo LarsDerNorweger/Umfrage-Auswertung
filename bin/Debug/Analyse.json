@@ -2,14 +2,14 @@
   "sex": {
     "name": "Geschlecht",
     "f": "weiblich",
-    "m": "männlich",
+    "m": "maennlich",
     "nd":"nicht angegeben"
   },
   "age": {
     "name": "Alter",
     "40": "unter 40",
     "50": "40-50",
-    "60": "über 50",
+    "60": "ueber 50",
     "nd":"nicht angegeben"
   },
   "alreadyClient": {
@@ -24,9 +24,9 @@
     "Geschlecht": "sex",
     "unter 40": "40",
     "40-50": "50",
-    "über 50": "60",
+    "ueber 50": "60",
     "weiblich": "f",
-    "männlich": "m",
+    "maennlich": "m",
     "bereits Kunde": "yes",
     "neuer Kunde": "no",
     "nicht angegeben":"nd"

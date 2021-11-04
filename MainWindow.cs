@@ -117,6 +117,8 @@ namespace Umfrage_Auswetung
          }
          if(e1.InputString != "")
          {
+            processData.StartAnalyse(preSelectedItem,mainSelectedItem);
+
             SeriesSelect.Items.Add(e1.InputString);
 
             m_chartHelper.AddNewSeries(e1.InputString);
