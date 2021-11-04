@@ -1,0 +1,36 @@
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.csproj.AssemblyReference.cache
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage_Auswetung.Properties.Resources.resources
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.csproj.GenerateResource.cache
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.csproj.CoreCompileInputs.cache
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\Umfrage Auswetung.exe.config
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\Umfrage Auswetung.exe
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\Umfrage Auswetung.pdb
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\StandartWindows.exe
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\Newtonsoft.Json.dll
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\StandartWindows.pdb
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\StandartWindows.exe.config
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\bin\Debug\Newtonsoft.Json.xml
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.csproj.CopyComplete
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.exe
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage Auswetung.pdb
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage_Auswetung.MainWindow.resources
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage_Auswetung.Settings.resources
+D:\Privat\Ortho Muenzner\Umfrage\Umfrage Auswetung\obj\Debug\Umfrage_Auswetung.LoadingScreen.resources
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Umfrage Auswetung.exe.config
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Umfrage Auswetung.exe
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Umfrage Auswetung.pdb
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Newtonsoft.Json.dll
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\StandartWindows.exe
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\StandartWindows.pdb
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\StandartWindows.exe.config
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Newtonsoft.Json.xml
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.AssemblyReference.cache
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.LoadingScreen.resources
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.Settings.resources
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.MainWindow.resources
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.Properties.Resources.resources
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.GenerateResource.cache
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.CoreCompileInputs.cache
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.CopyComplete
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.exe
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.pdb

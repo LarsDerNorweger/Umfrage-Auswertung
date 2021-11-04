@@ -110,7 +110,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\StandartWindows\StandartWindows.csproj">
+    <ProjectReference Include="D:\Privat\StandartWindows\StandartWindows.csproj">
       <Project>{8985a5c4-b134-439e-a223-3558e55d72d2}</Project>
       <Name>StandartWindows</Name>
     </ProjectReference>
