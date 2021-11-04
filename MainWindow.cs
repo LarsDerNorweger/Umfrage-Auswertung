@@ -21,11 +21,9 @@ namespace Umfrage_Auswetung
       DataOperation m_DataOperation = new DataOperation();
       
       Information inf = new Information();
-      ChartHelper m_chartHelper = new ChartHelper();
 
-
-      private string preSelectedItem = "all";
-      private string mainSelectedItem = "all";
+      private string preSelectedItem = "";
+      private string mainSelectedItem = "";
       private string xAxesItem="sex";
 
       private Dictionary<string,Dictionary<string,string>> AnalysePattern = new Dictionary<string, Dictionary<string, string>>();
@@ -40,15 +38,12 @@ namespace Umfrage_Auswetung
       {
          m_SettingsManager.LoadSettings();
 
-         processData.Settings = m_SettingsManager.m_AnalyseDataPath;
-         processData.LoadData();
-
-         m_chartHelper.LoadChartHelper(TestChart);
-
          AnalysePattern = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(m_DataOperation.ReadFromFile(@"./Analyse.json"));
          Dictionary<string, Dictionary<string, string>>.KeyCollection keys = AnalysePattern.Keys;
 
-         processData.Translationpattern = AnalysePattern["translate"];
+         processData.AnalysePattern = AnalysePattern;
+         processData.Settings = m_SettingsManager.m_AnalyseDataPath;
+         processData.LoadData(TestChart);
 
          foreach(string key in keys)
          {
@@ -110,6 +105,7 @@ namespace Umfrage_Auswetung
          Entry e1 = new Entry("Geben sie den Seriennamen ein");
          e1.ShowDialog();
 
+
          if(e1.InputString == "")
          {
             inf.m_InfoText = "Um eine Serie zu erstellen,muss ein Name angegeben werden";
@@ -117,17 +113,10 @@ namespace Umfrage_Auswetung
          }
          if(e1.InputString != "")
          {
-            processData.StartAnalyse(preSelectedItem,mainSelectedItem);
-
+            processData.AddDataSeries(e1.InputString, preSelectedItem, mainSelectedItem, xAxesItem);
             SeriesSelect.Items.Add(e1.InputString);
 
-            m_chartHelper.AddNewSeries(e1.InputString);
 
-            var s = TestChart.Series.FindByName(e1.InputString);
-
-            for(int i = 0; i< 100; i++)
-               s.Points.AddXY(i, i*i);
-            TestChart.Invalidate();
          }
       }
 
@@ -157,6 +146,12 @@ namespace Umfrage_Auswetung
       {
          ListBox chlib = (ListBox)sender;
          mainSelectedItem = chlib.SelectedItem.ToString();
+      }
+
+      private void xAxis_SelectedIndexChanged_1(object sender, EventArgs e)
+      {
+         ListBox chlib = (ListBox)sender;
+         xAxesItem = chlib.SelectedItem.ToString();
       }
    }
 }

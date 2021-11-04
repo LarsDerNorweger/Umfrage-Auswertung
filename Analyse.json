@@ -3,6 +3,7 @@
     "name": "Geschlecht",
     "f": "weiblich",
     "m": "maennlich",
+    "d": "divers",
     "nd":"nicht angegeben"
   },
   "age": {
@@ -27,6 +28,7 @@
     "ueber 50": "60",
     "weiblich": "f",
     "maennlich": "m",
+    "divers": "d",
     "bereits Kunde": "yes",
     "neuer Kunde": "no",
     "nicht angegeben":"nd"

@@ -3,20 +3,21 @@
     "name": "Geschlecht",
     "f": "weiblich",
     "m": "maennlich",
-    "nd":"nicht angegeben"
+    "d": "divers",
+    "nd": "nicht angegeben"
   },
   "age": {
     "name": "Alter",
     "40": "unter 40",
     "50": "40-50",
     "60": "ueber 50",
-    "nd":"nicht angegeben"
+    "nd": "nicht angegeben"
   },
   "alreadyClient": {
     "name": "Kundenstatus",
     "yes": "bereits Kunde",
     "no": "neuer Kunde",
-    "nd":"nicht angegeben"
+    "nd": "nicht angegeben"
   },
   "translate": {
     "Kundenstatus": "alreadyClient",
@@ -27,8 +28,9 @@
     "ueber 50": "60",
     "weiblich": "f",
     "maennlich": "m",
+    "divers": "d",
     "bereits Kunde": "yes",
     "neuer Kunde": "no",
-    "nicht angegeben":"nd"
+    "nicht angegeben": "nd"
   }
 }

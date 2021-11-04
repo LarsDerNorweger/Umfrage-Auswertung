@@ -10,12 +10,12 @@ namespace Umfrage_Auswetung
    {
       public Dictionary<string, System.Windows.Forms.DataVisualization.Charting.Series> ChartSeriesName =  new Dictionary<string,System.Windows.Forms.DataVisualization.Charting.Series>();
 
-      private System.Windows.Forms.DataVisualization.Charting.Chart m_choosenChart;
+      public System.Windows.Forms.DataVisualization.Charting.Chart selectedChart;
       private System.Windows.Forms.DataVisualization.Charting.ChartArea ChartAreaName =  new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 
       public void LoadChartHelper(System.Windows.Forms.DataVisualization.Charting.Chart choosenChart)
       {
-         m_choosenChart = choosenChart;
+         selectedChart = choosenChart;
          ChartAreaName.Name = "ChartArea";
          choosenChart.ChartAreas.Add(ChartAreaName);
       }
@@ -31,7 +31,7 @@ namespace Umfrage_Auswetung
          ChartSeriesName[SeriesName].ChartArea = "ChartArea";
          ChartSeriesName[SeriesName].Name = SeriesName;
 
-         m_choosenChart.Series.Add(ChartSeriesName[SeriesName]);
+         selectedChart.Series.Add(ChartSeriesName[SeriesName]);
       }
 
       

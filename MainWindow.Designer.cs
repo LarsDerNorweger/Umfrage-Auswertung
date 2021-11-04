@@ -215,6 +215,7 @@ namespace Umfrage_Auswetung
          this.xAxis.Name = "xAxis";
          this.xAxis.Size = new System.Drawing.Size(118, 225);
          this.xAxis.TabIndex = 18;
+         this.xAxis.SelectedIndexChanged += new System.EventHandler(this.xAxis_SelectedIndexChanged_1);
          // 
          // MainWindow
          // 

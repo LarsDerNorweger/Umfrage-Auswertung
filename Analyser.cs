@@ -9,19 +9,24 @@ namespace Umfrage_Auswetung
 {
    public class Analyser
    {
-      public Dictionary<string,string> Translationpattern = new Dictionary<string, string>();
+      public Dictionary<string,Dictionary<string,string>> AnalysePattern = new Dictionary<string, Dictionary<string, string>>();
       public Dictionary<string,string> Settings = new Dictionary<string,string>();
-      public DataOperation m_DataOperation = new DataOperation();
+      
+      private DataOperation m_DataOperation = new DataOperation();
+      private ChartHelper chartHelper = new ChartHelper();
 
-
+      private Dictionary<string,string> Translationpattern = new Dictionary<string, string>();
       private Dictionary<int,Dictionary<string,string>> Custumers = new Dictionary<int,Dictionary<string,string>>();
       private List<int> PreSortedList = new List<int>();
 
       private Dictionary<int, Dictionary<string, string>>.KeyCollection PersonNumber;
 
 
-      public void LoadData()
+      public void LoadData(System.Windows.Forms.DataVisualization.Charting.Chart ChartName)
       {
+         chartHelper.LoadChartHelper(ChartName);
+         Translationpattern = AnalysePattern["translate"];
+
          Dictionary<string,string> PersonData = new Dictionary<string,string>();
          string newPath;
 
@@ -37,17 +42,44 @@ namespace Umfrage_Auswetung
          PersonNumber = Custumers.Keys;
       }
 
-      public void AddDataSeries(System.Windows.Forms.DataVisualization.Charting.Chart ChartName, string preSortItem, string mainSortItem, string xAxisItem)
+      public void AddDataSeries(string Seriesname, string preSortItem, string mainSortItem, string xAxisItem)
       {
+         PreSortedList.Clear();
 
          StartAnalyse(preSortItem, mainSortItem);
+         Dictionary<string,int> yValues = SplitforxAxis(xAxisItem);
+         Dictionary<string,int>.KeyCollection xKeys = yValues.Keys;
+
+         chartHelper.AddNewSeries(Seriesname);
+
+         var s = chartHelper.selectedChart.Series.FindByName(Seriesname);
+         foreach(string x in xKeys)
+            s.Points.AddXY(AnalysePattern[translateItem(xAxisItem)][x], yValues[x]);
+          
+         chartHelper.selectedChart.Invalidate();
          return;
       }
 
-      private void SplitforxAxis(string xAxisItem)
+      private Dictionary<string,int> SplitforxAxis(string xAxisItem)
       {
+         xAxisItem = translateItem(xAxisItem);
 
-         return;
+         Dictionary<string, int> xValues = new Dictionary<string, int>();
+         Dictionary<string,string>.KeyCollection allxValues = AnalysePattern[xAxisItem].Keys;
+         string temp;
+
+
+         foreach (string str in allxValues)
+            if(str != "name")
+               xValues.Add(str, 0);
+
+
+         foreach(int i in PreSortedList)
+         {
+            temp = Custumers[i][xAxisItem];
+            xValues[temp]++;
+         }
+         return xValues;
       }
 
       private int CountforXAxis(List<int> toCountList)
@@ -56,7 +88,7 @@ namespace Umfrage_Auswetung
          return 0;
       }
 
-      public void StartAnalyse(string preSortItem, string mainSortItem)
+      private void StartAnalyse(string preSortItem, string mainSortItem)
       {
          if(mainSortItem == "")
             foreach(int person in PersonNumber)
