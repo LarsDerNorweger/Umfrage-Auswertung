@@ -46,6 +46,7 @@ namespace Umfrage_Auswetung
          this.mainSelect = new System.Windows.Forms.ListBox();
          this.preSelect = new System.Windows.Forms.ListBox();
          this.xAxis = new System.Windows.Forms.ListBox();
+         this.moreInfromation = new System.Windows.Forms.Button();
          ((System.ComponentModel.ISupportInitialize)(this.TestChart)).BeginInit();
          this.basics.SuspendLayout();
          this.groupBox3.SuspendLayout();
@@ -186,7 +187,7 @@ namespace Umfrage_Auswetung
          this.groupBox4.Controls.Add(this.label1);
          this.groupBox4.Location = new System.Drawing.Point(865, 368);
          this.groupBox4.Name = "groupBox4";
-         this.groupBox4.Size = new System.Drawing.Size(334, 295);
+         this.groupBox4.Size = new System.Drawing.Size(334, 293);
          this.groupBox4.TabIndex = 17;
          this.groupBox4.TabStop = false;
          // 
@@ -217,11 +218,22 @@ namespace Umfrage_Auswetung
          this.xAxis.TabIndex = 18;
          this.xAxis.SelectedIndexChanged += new System.EventHandler(this.xAxis_SelectedIndexChanged_1);
          // 
+         // moreInfromation
+         // 
+         this.moreInfromation.Location = new System.Drawing.Point(984, 705);
+         this.moreInfromation.Name = "moreInfromation";
+         this.moreInfromation.Size = new System.Drawing.Size(131, 23);
+         this.moreInfromation.TabIndex = 18;
+         this.moreInfromation.Text = "Mehr Informationen";
+         this.moreInfromation.UseVisualStyleBackColor = true;
+         this.moreInfromation.Click += new System.EventHandler(this.moreInfromation_Click);
+         // 
          // MainWindow
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1248, 740);
+         this.Controls.Add(this.moreInfromation);
          this.Controls.Add(this.groupBox4);
          this.Controls.Add(this.groupBox3);
          this.Controls.Add(this.SettingsButton);
@@ -258,5 +270,6 @@ namespace Umfrage_Auswetung
       private System.Windows.Forms.ListBox xAxis;
       private System.Windows.Forms.ListBox mainSelect;
       private System.Windows.Forms.ListBox preSelect;
+      private System.Windows.Forms.Button moreInfromation;
    }
 }

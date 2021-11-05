@@ -14,12 +14,15 @@ namespace Umfrage_Auswetung
       
       private DataOperation m_DataOperation = new DataOperation();
       private ChartHelper chartHelper = new ChartHelper();
+      private MoreInformation moreInformation = new MoreInformation();
 
       private Dictionary<string,string> Translationpattern = new Dictionary<string, string>();
       private Dictionary<int,Dictionary<string,string>> Custumers = new Dictionary<int,Dictionary<string,string>>();
       private List<int> PreSortedList = new List<int>();
 
       private Dictionary<int, Dictionary<string, string>>.KeyCollection PersonNumber;
+
+      
 
 
       public void LoadData(System.Windows.Forms.DataVisualization.Charting.Chart ChartName)
@@ -40,6 +43,13 @@ namespace Umfrage_Auswetung
             Custumers.Add(i, PersonData);
          }
          PersonNumber = Custumers.Keys;
+         moreInformation.total.Text = PersonNumber.Count.ToString();
+      }
+
+      public void ShowInformation()
+      {
+         moreInformation.Show();
+         return;
       }
 
       public void AddDataSeries(string Seriesname, string preSortItem, string mainSortItem, string xAxisItem)
@@ -48,15 +58,36 @@ namespace Umfrage_Auswetung
 
          StartAnalyse(preSortItem, mainSortItem);
          Dictionary<string,int> yValues = SplitforxAxis(xAxisItem);
+         Dictionary<string,int> Data = new Dictionary<string, int>();
+
          Dictionary<string,int>.KeyCollection xKeys = yValues.Keys;
+
 
          chartHelper.AddNewSeries(Seriesname);
 
          var s = chartHelper.selectedChart.Series.FindByName(Seriesname);
          foreach(string x in xKeys)
+         {
             s.Points.AddXY(AnalysePattern[translateItem(xAxisItem)][x], yValues[x]);
+            Data.Add(AnalysePattern[translateItem(xAxisItem)][x], yValues[x]);
+         }
+
+         moreInformation.Data.Add(Seriesname, Data);
+         moreInformation.UpdateContent();
           
          chartHelper.selectedChart.Invalidate();
+         return;
+      }
+
+      public void RemoveDataFromInformation(string Seriesname)
+      {
+         moreInformation.Data.Remove(Seriesname);
+         moreInformation.UpdateContent();
+         return;
+      }
+
+         private void AddDataForInformation()
+      {
          return;
       }
 
@@ -112,6 +143,8 @@ namespace Umfrage_Auswetung
             return toTranslateItem;
          return Translationpattern[toTranslateItem];
       }
+
+      
 
 
 

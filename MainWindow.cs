@@ -19,7 +19,7 @@ namespace Umfrage_Auswetung
 
       Analyser processData = new Analyser();
       DataOperation m_DataOperation = new DataOperation();
-      
+
       Information inf = new Information();
 
       private string preSelectedItem = "";
@@ -52,7 +52,7 @@ namespace Umfrage_Auswetung
             xAxis.Items.Add(AnalysePattern[key]["name"]);
             preSelect.Items.Add(AnalysePattern[key]["name"]);
          }
-   }
+      }
 
       private void SettingsButton_Click(object sender, EventArgs e)
       {
@@ -66,17 +66,17 @@ namespace Umfrage_Auswetung
             string str = m_DataOperation.ConvertDataToJSON(m_SettingsManager.m_AnalyseDataPath);
             Save svdlg = new Save(str, m_SettingsManager.m_SettingsPath);
             svdlg.ShowDialog();
-            
+
             m_SettingsManager.LoadSettings();
          }
       }
 
       private void ShowChart_Click(object sender, EventArgs e)
       {
-         
+
       }
 
-   
+
 
       private void deleteGraph_Click(object sender, EventArgs e)
       {
@@ -94,10 +94,13 @@ namespace Umfrage_Auswetung
             inf.m_InfoText = "Bitte wählen Sie eine Serie zuerst aus, bevor sie sie löschen!";
             inf.ShowDialog();
          }
-               
+
          if(deleteList.Count != 0)
             foreach(object deleteObject in deleteList)
+            {
                SeriesSelect.Items.Remove(deleteObject);
+               processData.RemoveDataFromInformation(deleteObject.ToString());
+            }
       }
 
       private void newGraph_Click(object sender, EventArgs e)
@@ -115,8 +118,6 @@ namespace Umfrage_Auswetung
          {
             processData.AddDataSeries(e1.InputString, preSelectedItem, mainSelectedItem, xAxesItem);
             SeriesSelect.Items.Add(e1.InputString);
-
-
          }
       }
 
@@ -129,7 +130,7 @@ namespace Umfrage_Auswetung
       private void preSelect_SelectedIndexChanged(object sender, EventArgs e)
       {
          ListBox chlib = (ListBox)sender;
-        
+
          preSelectedItem = chlib.SelectedItem.ToString();
          mainSelect.Items.Clear();
 
@@ -152,6 +153,11 @@ namespace Umfrage_Auswetung
       {
          ListBox chlib = (ListBox)sender;
          xAxesItem = chlib.SelectedItem.ToString();
+      }
+
+      private void moreInfromation_Click(object sender, EventArgs e)
+      {
+         processData.ShowInformation();
       }
    }
 }

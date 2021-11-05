@@ -25,7 +25,6 @@ C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\St
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\StandartWindows.exe.config
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\bin\Debug\Newtonsoft.Json.xml
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.AssemblyReference.cache
-C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.LoadingScreen.resources
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.Settings.resources
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.MainWindow.resources
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.Properties.Resources.resources
@@ -34,3 +33,4 @@ C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Um
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.csproj.CopyComplete
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.exe
 C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage Auswetung.pdb
+C:\Users\c.boettger\Source\Repos\LarsDerNorweger\Umfrage-Auswertung\obj\Debug\Umfrage_Auswetung.MoreInformation.resources
